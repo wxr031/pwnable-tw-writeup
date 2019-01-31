@@ -1,0 +1,7 @@
+0x08049f13 : xor ecx, ecx ; pop ebx ; mov eax, ecx ; pop esi ; pop edi ; pop ebp ; ret
+0x08080473 : cdq ; ret
+0x0808f612 : add eax, 0xb ; pop edi ; ret
+0x080a6d51 : xchg eax, ebx ; ret
+0x080634b7 : neg eax ; ret
+0x080a6d51 : xchg eax, ebx ; ret
+0x08049a21 : int 0x80
